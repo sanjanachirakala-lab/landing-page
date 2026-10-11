@@ -1,0 +1,82 @@
+/* Custom CSS3 - works together with Tailwind CSS */
+
+html { scroll-behavior: smooth; scroll-padding-top: 70px; }
+
+/* Hero background gradient */
+.hero-bg {
+  background: linear-gradient(135deg, #f1f0ff 0%, #ffffff 55%, #e4e1ff 100%);
+}
+
+/* Floating animation for the product illustration */
+.float { animation: float 4s ease-in-out infinite; }
+
+@keyframes float {
+  0%, 100% { transform: translateY(0); }
+  50%      { transform: translateY(-14px); }
+}
+
+/* Nav link underline effect */
+.nav-link { position: relative; padding-bottom: 4px; }
+.nav-link::after {
+  content: "";
+  position: absolute;
+  left: 0; bottom: 0;
+  width: 0; height: 2px;
+  background: #6d4aff;
+  transition: width 0.25s ease;
+}
+.nav-link:hover::after { width: 100%; }
+
+/* Reusable card */
+.card {
+  background: #ffffff;
+  border: 1px solid #e5e7eb;
+  border-radius: 14px;
+  padding: 24px;
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.05);
+  transition: transform 0.25s ease, box-shadow 0.25s ease;
+}
+.card:hover {
+  transform: translateY(-6px);
+  box-shadow: 0 12px 24px rgba(109, 74, 255, 0.15);
+}
+
+.icon {
+  font-size: 1.8rem;
+  width: 52px; height: 52px;
+  display: flex; align-items: center; justify-content: center;
+  background: #f1f0ff;
+  border-radius: 12px;
+  margin-bottom: 14px;
+}
+
+/* Pricing cards (Flexbox column) */
+.price-card {
+  display: flex;
+  flex-direction: column;
+  background: #ffffff;
+  color: #1f2937;
+  border-radius: 16px;
+  padding: 28px;
+  transition: transform 0.25s ease;
+}
+.price-card:hover { transform: translateY(-6px); }
+.price-card ul { flex-grow: 1; }
+
+.price-btn {
+  display: block;
+  text-align: center;
+  font-weight: 600;
+  padding: 12px 20px;
+  border-radius: 10px;
+  border: 2px solid #6d4aff;
+  color: #5b38ee;
+  transition: background 0.2s ease, color 0.2s ease;
+}
+.price-btn:hover { background: #6d4aff; color: #ffffff; }
+
+/* Respect users who prefer less motion */
+@media (prefers-reduced-motion: reduce) {
+  .float { animation: none; }
+  html { scroll-behavior: auto; }
+}

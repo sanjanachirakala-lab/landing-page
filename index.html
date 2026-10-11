@@ -1,0 +1,250 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="PulseWear X1 - a smartwatch that keeps up with your day. Responsive product landing page.">
+  <title>PulseWear X1 | Smartwatch Landing Page</title>
+
+  <!-- Tailwind CSS (CDN) -->
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script>
+    tailwind.config = {
+      theme: {
+        extend: {
+          colors: {
+            brand: { 50: '#f1f0ff', 100: '#e4e1ff', 500: '#6d4aff', 600: '#5b38ee', 700: '#4a2ccc', 900: '#1b1245' }
+          }
+        }
+      }
+    };
+  </script>
+
+  <!-- Custom CSS3 -->
+  <link rel="stylesheet" href="style.css">
+</head>
+<body class="bg-white text-slate-800 antialiased">
+
+  <!-- 1. NAVIGATION BAR -->
+  <header class="sticky top-0 z-50 bg-white/90 backdrop-blur border-b border-slate-200">
+    <nav class="max-w-6xl mx-auto flex items-center justify-between px-5 py-4" aria-label="Main navigation">
+      <a href="#home" class="text-2xl font-extrabold text-brand-600">Pulse<span class="text-slate-900">Wear</span></a>
+
+      <ul class="hidden md:flex items-center gap-8 font-medium">
+        <li><a class="nav-link" href="#features">Features</a></li>
+        <li><a class="nav-link" href="#benefits">Benefits</a></li>
+        <li><a class="nav-link" href="#reviews">Reviews</a></li>
+        <li><a class="nav-link" href="#pricing">Pricing</a></li>
+      </ul>
+
+      <a href="#pricing" class="hidden md:inline-block bg-brand-500 hover:bg-brand-600 text-white font-semibold px-5 py-2 rounded-lg transition">Buy Now</a>
+
+      <button id="menu-btn" class="md:hidden p-2 rounded-lg border border-slate-300" aria-label="Toggle menu" aria-expanded="false">
+        <svg class="w-6 h-6" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path stroke-linecap="round" d="M4 6h16M4 12h16M4 18h16"/></svg>
+      </button>
+    </nav>
+
+    <ul id="mobile-menu" class="hidden md:hidden flex-col px-5 pb-4 gap-3 font-medium border-t border-slate-100">
+      <li><a class="block py-2" href="#features">Features</a></li>
+      <li><a class="block py-2" href="#benefits">Benefits</a></li>
+      <li><a class="block py-2" href="#reviews">Reviews</a></li>
+      <li><a class="block py-2" href="#pricing">Pricing</a></li>
+      <li><a class="block text-center bg-brand-500 text-white font-semibold px-5 py-2 rounded-lg" href="#pricing">Buy Now</a></li>
+    </ul>
+  </header>
+
+  <main>
+    <!-- 2. HERO SECTION -->
+    <section id="home" class="hero-bg">
+      <div class="max-w-6xl mx-auto grid md:grid-cols-2 items-center gap-10 px-5 py-16 md:py-24">
+        <div class="text-center md:text-left">
+          <span class="inline-block bg-brand-100 text-brand-700 text-sm font-semibold px-3 py-1 rounded-full mb-4">New &bull; Launching this season</span>
+          <h1 class="text-4xl sm:text-5xl lg:text-6xl font-extrabold leading-tight text-slate-900">
+            PulseWear <span class="text-brand-500">X1</span><br>Keeps up with your day.
+          </h1>
+          <p class="mt-5 text-lg text-slate-600 max-w-xl mx-auto md:mx-0">
+            A sleek smartwatch with a bright AMOLED display, 7-day battery life and smart health tracking, built for study, work and workouts.
+          </p>
+          <div class="mt-8 flex flex-col sm:flex-row gap-4 justify-center md:justify-start">
+            <a href="#pricing" class="bg-brand-500 hover:bg-brand-600 text-white font-semibold px-8 py-3 rounded-lg shadow-lg transition">Buy Now</a>
+            <a href="#features" class="border border-brand-500 text-brand-600 hover:bg-brand-50 font-semibold px-8 py-3 rounded-lg transition">Learn More</a>
+          </div>
+        </div>
+
+        <!-- Product image (inline SVG) -->
+        <div class="flex justify-center">
+          <svg class="float w-64 sm:w-80 drop-shadow-2xl" viewBox="0 0 240 340" role="img" aria-label="PulseWear X1 smartwatch illustration">
+            <rect x="75" y="0" width="90" height="110" rx="22" fill="#2b2f45"/>
+            <rect x="75" y="230" width="90" height="110" rx="22" fill="#2b2f45"/>
+            <rect x="38" y="85" width="164" height="170" rx="42" fill="#0f1224"/>
+            <rect x="48" y="95" width="144" height="150" rx="34" fill="#1b1245"/>
+            <circle cx="120" cy="170" r="52" fill="#241a63" stroke="#6d4aff" stroke-width="4"/>
+            <line x1="120" y1="170" x2="120" y2="136" stroke="#ffffff" stroke-width="5" stroke-linecap="round"/>
+            <line x1="120" y1="170" x2="146" y2="184" stroke="#a99bff" stroke-width="4" stroke-linecap="round"/>
+            <circle cx="120" cy="170" r="5" fill="#ffffff"/>
+            <text x="120" y="215" text-anchor="middle" font-family="Arial" font-size="12" fill="#cfc8ff">72 BPM</text>
+            <rect x="204" y="150" width="8" height="34" rx="4" fill="#6d4aff"/>
+          </svg>
+        </div>
+      </div>
+    </section>
+
+    <!-- 3. FEATURES SECTION (CSS Grid via Tailwind) -->
+    <section id="features" class="py-16 md:py-24 bg-white">
+      <div class="max-w-6xl mx-auto px-5">
+        <div class="text-center max-w-2xl mx-auto mb-12">
+          <h2 class="text-3xl md:text-4xl font-extrabold text-slate-900">Packed with features</h2>
+          <p class="mt-3 text-slate-600">Everything you need on your wrist, nothing you don't.</p>
+        </div>
+
+        <div class="grid sm:grid-cols-2 lg:grid-cols-4 gap-6">
+          <article class="card">
+            <div class="icon">🖥️</div>
+            <h3 class="font-bold text-lg mb-2">AMOLED Display</h3>
+            <p class="text-slate-600 text-sm">Crisp 1.5" screen that stays readable even in bright sunlight.</p>
+          </article>
+          <article class="card">
+            <div class="icon">🔋</div>
+            <h3 class="font-bold text-lg mb-2">7-Day Battery</h3>
+            <p class="text-slate-600 text-sm">Charge once and forget it for a whole week of normal use.</p>
+          </article>
+          <article class="card">
+            <div class="icon">❤️</div>
+            <h3 class="font-bold text-lg mb-2">Health Tracking</h3>
+            <p class="text-slate-600 text-sm">Heart rate, sleep and step tracking with simple daily insights.</p>
+          </article>
+          <article class="card">
+            <div class="icon">💧</div>
+            <h3 class="font-bold text-lg mb-2">Water Resistant</h3>
+            <p class="text-slate-600 text-sm">5 ATM rating, so rain, sweat and swims are no problem.</p>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <!-- 4. BENEFITS SECTION (Flexbox via Tailwind) -->
+    <section id="benefits" class="py-16 md:py-24 bg-brand-50">
+      <div class="max-w-6xl mx-auto px-5 flex flex-col lg:flex-row items-center gap-12">
+        <div class="lg:w-1/2">
+          <h2 class="text-3xl md:text-4xl font-extrabold text-slate-900">Why you'll love it</h2>
+          <p class="mt-3 text-slate-600">PulseWear X1 fits into your routine and helps you build better habits.</p>
+        </div>
+
+        <ul class="lg:w-1/2 flex flex-col gap-5 w-full">
+          <li class="flex gap-4 bg-white p-5 rounded-xl shadow-sm">
+            <span class="text-2xl">⏰</span>
+            <div><h3 class="font-bold">Stay on schedule</h3><p class="text-slate-600 text-sm">Class, meeting and reminder alerts right on your wrist.</p></div>
+          </li>
+          <li class="flex gap-4 bg-white p-5 rounded-xl shadow-sm">
+            <span class="text-2xl">🏃</span>
+            <div><h3 class="font-bold">Stay active</h3><p class="text-slate-600 text-sm">Over 20 workout modes with automatic activity detection.</p></div>
+          </li>
+          <li class="flex gap-4 bg-white p-5 rounded-xl shadow-sm">
+            <span class="text-2xl">💸</span>
+            <div><h3 class="font-bold">Premium feel, fair price</h3><p class="text-slate-600 text-sm">Flagship features without the flagship price tag.</p></div>
+          </li>
+        </ul>
+      </div>
+    </section>
+
+    <!-- 5. TESTIMONIALS SECTION -->
+    <section id="reviews" class="py-16 md:py-24 bg-white">
+      <div class="max-w-6xl mx-auto px-5">
+        <div class="text-center max-w-2xl mx-auto mb-12">
+          <h2 class="text-3xl md:text-4xl font-extrabold text-slate-900">What users say</h2>
+          <p class="mt-3 text-sm text-slate-500">Sample reviews written for this demo project.</p>
+        </div>
+
+        <div class="grid md:grid-cols-3 gap-6">
+          <blockquote class="card">
+            <p class="text-amber-500 mb-2" aria-label="5 out of 5 stars">★★★★★</p>
+            <p class="text-slate-700">"Battery easily lasts the week and the screen looks great. Super comfortable to wear all day."</p>
+            <footer class="mt-4 font-semibold text-sm">Aarav S. <span class="font-normal text-slate-500">- Student</span></footer>
+          </blockquote>
+          <blockquote class="card">
+            <p class="text-amber-500 mb-2" aria-label="4 out of 5 stars">★★★★☆</p>
+            <p class="text-slate-700">"The sleep tracking helped me fix my routine. Setup took just a couple of minutes."</p>
+            <footer class="mt-4 font-semibold text-sm">Meera K. <span class="font-normal text-slate-500">- Designer</span></footer>
+          </blockquote>
+          <blockquote class="card">
+            <p class="text-amber-500 mb-2" aria-label="5 out of 5 stars">★★★★★</p>
+            <p class="text-slate-700">"Great value for the price. Workout tracking is accurate and the strap feels premium."</p>
+            <footer class="mt-4 font-semibold text-sm">Rohan P. <span class="font-normal text-slate-500">- Fitness enthusiast</span></footer>
+          </blockquote>
+        </div>
+      </div>
+    </section>
+
+    <!-- 6. PRICING / CALL-TO-ACTION SECTION -->
+    <section id="pricing" class="py-16 md:py-24 bg-brand-900 text-white">
+      <div class="max-w-6xl mx-auto px-5">
+        <div class="text-center max-w-2xl mx-auto mb-12">
+          <h2 class="text-3xl md:text-4xl font-extrabold">Choose your PulseWear</h2>
+          <p class="mt-3 text-brand-100">Simple pricing. Free shipping and a 30-day return window.</p>
+        </div>
+
+        <div class="grid md:grid-cols-3 gap-6 items-stretch">
+          <div class="price-card">
+            <h3 class="font-bold text-lg">Lite</h3>
+            <p class="text-4xl font-extrabold my-4">₹2,999</p>
+            <ul class="text-sm text-slate-600 space-y-2 mb-6">
+              <li>✔ 1.3" display</li><li>✔ Heart-rate tracking</li><li>✔ 5-day battery</li>
+            </ul>
+            <a href="#" class="price-btn">Get Started</a>
+          </div>
+
+          <div class="price-card ring-4 ring-brand-500 md:-translate-y-3">
+            <span class="self-start bg-brand-500 text-white text-xs font-semibold px-3 py-1 rounded-full">Most popular</span>
+            <h3 class="font-bold text-lg mt-2">X1</h3>
+            <p class="text-4xl font-extrabold my-4">₹4,999</p>
+            <ul class="text-sm text-slate-600 space-y-2 mb-6">
+              <li>✔ 1.5" AMOLED display</li><li>✔ Health &amp; sleep tracking</li><li>✔ 7-day battery</li>
+            </ul>
+            <a href="#" class="price-btn bg-brand-500 text-white hover:bg-brand-600">Buy Now</a>
+          </div>
+
+          <div class="price-card">
+            <h3 class="font-bold text-lg">X1 Pro</h3>
+            <p class="text-4xl font-extrabold my-4">₹6,999</p>
+            <ul class="text-sm text-slate-600 space-y-2 mb-6">
+              <li>✔ Everything in X1</li><li>✔ Built-in GPS</li><li>✔ Metal strap included</li>
+            </ul>
+            <a href="#" class="price-btn">Get Started</a>
+          </div>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <!-- 7. FOOTER -->
+  <footer class="bg-slate-900 text-slate-300">
+    <div class="max-w-6xl mx-auto px-5 py-12 grid sm:grid-cols-2 lg:grid-cols-3 gap-8">
+      <div>
+        <a href="#home" class="text-2xl font-extrabold text-white">Pulse<span class="text-brand-500">Wear</span></a>
+        <p class="mt-3 text-sm">Smart wearables for everyday life.</p>
+      </div>
+
+      <div>
+        <h3 class="font-semibold text-white mb-3">Contact</h3>
+        <address class="not-italic text-sm space-y-1">
+          <p>Email: <a class="hover:text-white underline" href="mailto:sanjanachirakala@gmail.com">sanjanachirakala@gmail.com</a></p>
+        </address>
+      </div>
+
+      <div>
+        <h3 class="font-semibold text-white mb-3">Follow us</h3>
+        <ul class="flex gap-4 text-sm">
+          <li><a class="hover:text-white underline" href="https://github.com/sanjanachirakala-lab" target="_blank" rel="noopener">GitHub</a></li>
+          <li><a class="hover:text-white underline" href="https://www.linkedin.com/" target="_blank" rel="noopener">LinkedIn</a></li>
+          <li><a class="hover:text-white underline" href="https://www.instagram.com/" target="_blank" rel="noopener">Instagram</a></li>
+        </ul>
+      </div>
+    </div>
+    <div class="border-t border-slate-700 text-center text-xs py-4">
+      &copy; 2026 PulseWear (demo project by Chirakala Sanjana). All rights reserved.
+    </div>
+  </footer>
+
+  <script src="script.js"></script>
+</body>
+</html>
